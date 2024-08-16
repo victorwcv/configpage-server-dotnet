@@ -1,0 +1,71 @@
+# Compiled object files
+*.o
+*.i
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+
+# Build directories
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# npm packages (if using npm)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Local environment settings
+.env
+
+# Log files
+*.log
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Entity Framework Migrations
+Migrations/
+
+# Publish output
+publish/
+
+# JetBrains Rider
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.history/

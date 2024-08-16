@@ -13,10 +13,9 @@ var connectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRI
 var databaseName = builder.Configuration.GetSection("MongoDB:DatabaseName").Value
                     ?? throw new InvalidOperationException("MongoDB database name is not configured.");
 
-var environment = Environment.GetEnvironmentVariable("ENVIRONMENT");
-var corsConnection = Environment.GetEnvironmentVariable("CORS_CONNECTION");
+var environment = Environment.GetEnvironmentVariable("ENVIRONMENT") ?? "production";
 
-var allowedOrigins = environment == "development" ? "http://localhost:5173" : corsConnection;
+var allowedOrigins = environment == "development" ? "http://localhost:5173" : "https://conifgpage.onrender.com";
 
 // CORS settings
 builder.Services.AddCors(options =>
@@ -24,7 +23,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173")
+            builder.WithOrigins(allowedOrigins)
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         }

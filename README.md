@@ -40,7 +40,7 @@ Antes de empezar, asegúrate de tener instalados los siguientes programas:
 
     ```bash
       MONGO_CONNECTION_STRING= *tu string de conexion*
-      ENVIROMENT=development
+      ENVIRONMENT=development
     ```
 
 5. **Iniciar el servidor**
